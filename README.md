@@ -1,4 +1,4 @@
-# 🧠 Appearance-Based Player Re-Identification from a Single Camera Feed
+#  Appearance-Based Player Re-Identification from a Single Camera Feed
 
 <p align="center">
   <!-- Programming Language & Environment -->
