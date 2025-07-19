@@ -89,17 +89,17 @@ pip install -r requirements.txt
 
 This system is designed to simulate real-time re-identification. It uses a multi-stage modular pipeline:
 
-### 1. 🎯 Player Detection (YOLOv11)
+### 1.  Player Detection (YOLOv11)
 
 * Pretrained YOLOv11 model detects `player` and `goalkeeper`.
 * Filters out ball, referees, and irrelevant classes using confidence thresholding and color heuristics.
 
-### 2. 🆔 Initial Identity Assignment
+### 2.  Initial Identity Assignment
 
 * Unique IDs are assigned to players in the first few seconds.
 * Appearance features are extracted and stored as identity references.
 
-### 3. 🎨 Appearance Embedding Extraction
+### 3.  Appearance Embedding Extraction
 
 A hybrid descriptor is computed using:
 
@@ -107,7 +107,7 @@ A hybrid descriptor is computed using:
 * **Sobel Texture Filters**: capture logos, numbers, and detail.
 * Compared using **cosine similarity** for consistency and accuracy.
 
-### 4. 🕵️‍♂️ Frame-by-Frame Tracking
+### 4.  Frame-by-Frame Tracking
 
 Each new detection is matched to existing tracks using a **multi-metric cost matrix**:
 
@@ -117,17 +117,17 @@ Each new detection is matched to existing tracks using a **multi-metric cost mat
 
 A greedy assignment algorithm ensures optimal matching.
 
-### 5. 👀 Occlusion Handling & Re-Entries
+### 5.  Occlusion Handling & Re-Entries
 
 * Tracks that disappear are timestamped and monitored.
 * On reappearance, embeddings are compared to reassign the correct previous ID.
 
-### 6. 🔄 Track Management
+### 6.  Track Management
 
 * Tracks are labeled as `active`, `disappeared`, or `removed`.
 * Old tracks are pruned if missing for too long.
 
-### 7. 🖼️ Visualization & Output
+### 7.  Visualization & Output
 
 Each frame is annotated with:
 
@@ -136,21 +136,6 @@ Each frame is annotated with:
 * Detection Confidence
 
 Final annotated video is exported to the `results/` folder.
-
----
-
-## ⚠️ Challenges Tackled
-
-### Referee Misclassification
-
-* Referees in yellow were often misclassified as players.
-* **Color-based filtering**: Detections with >30% yellow pixels were discarded.
-* **Raised confidence threshold** to 0.92 helped filter noisy detections.
-
-### Real-Time Constraints
-
-* Designed a lightweight hybrid descriptor.
-* Optimized assignment and pruning logic for frame-rate efficiency.
 
 ---
 
@@ -169,8 +154,8 @@ Final annotated video is exported to the `results/` folder.
 
 Annotated videos are saved in the `results/` directory:
 
-* ✅ `submit1.mp4` — Demonstration of ID re-assignment and consistent tracking
-* ✅ `submit2.mp4` — (Optional) Alternate test case or variation
+* `submit1.mp4` — Demonstration of ID re-assignment and consistent tracking
+* `submit2.mp4` — (Optional) Alternate test case or variation
 
 ---
 
@@ -187,16 +172,52 @@ Run all cells to process the video and generate annotated outputs.
 
 ---
 
-## 🧾 License
+## Configuration
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for full details.
+### Environment Variables
+
+```bash
+# Required
+CUDA_VISIBLE_DEVICES=0  # Optional: GPU configuration
+
+# Optional
+VIDEO_BROADCAST_PATH=path/to/broadcast_video.mp4
+VIDEO_TACTICAM_PATH=path/to/tacticam_video.mp4
+```
 
 ---
 
-## 🧑‍💻 Author
+## Contributing
 
-**Sai Krishna Chowdary Chundru**
-📬 [GitHub](https://github.com/sAI-2025)
-🔗 [LinkedIn](https://linkedin.com/in/sai-krishna-chowdary-chundru)
-📝 [Medium](https://medium.com/@sai2025)
+We welcome contributions from the community! To contribute:
 
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit your changes: `git commit -m 'Add new feature'`
+4. Push to your branch: `git push origin feature/new-feature`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Licensed under the **MIT License**. See [LICENSE](./LICENSE) for more.
+
+---
+
+
+## 📬 Contact & Support
+
+* **GitHub Issues**: [Submit bugs or requests](https://github.com/sAI-2025/Appearance-Based-Player-Re-Identification-from-a-Single-Camera-Feed/issues)
+* **Author**: **Sai Krishna Chowdary Chundru**
+* **GitHub**: [sAI-2025](https://github.com/sAI-2025)
+* **LinkedIn**: [linkedin/sai-krishna-chowdary-chundru](https://linkedin.com/in/sai-krishna-chowdary-chundru)
+* **Medium**: [@sai2025](https://medium.com/@sai2025)
+---
+
+### Author: Sai Krishna Chowdary Chundru
+
+* **Email**: cchsaikrishnachowdary@gmail.com
+* **LinkedIn**: [sai-krishna-chowdary-chundru](https://linkedin.com/in/sai-krishna-chowdary-chundru)
+
+---
