@@ -1,16 +1,33 @@
-Absolutely! Below is a **well-structured, markdown-based `README.md` file** tailored specifically for your project: **"Appearance-Based Player Re-Identification from a Single Camera Feed"**. It matches your folder structure, clearly explains how to run the code, and includes all required documentation sections based on the assignment instructions.
-
----
-
-````markdown
 # 🧠 Appearance-Based Player Re-Identification from a Single Camera Feed
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python" />
-  <img src="https://img.shields.io/badge/YOLOv11-Detection-orange?logo=opencv" />
-  <img src="https://img.shields.io/badge/ReID-Appearance%20Based-green?logo=pytorch" />
-  <img src="https://img.shields.io/badge/Similarity-Cosine%20Metric-9cf?logo=scikitlearn" />
-  <img src="https://img.shields.io/badge/License-MIT-green?logo=opensourceinitiative" />
+  <!-- Programming Language & Environment -->
+  <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python" alt="Python" />
+  <img src="https://img.shields.io/badge/Platform-Linux%2FWindows-lightgrey?logo=windows" alt="Platform" />
+  <img src="https://img.shields.io/badge/GPU-Supported-green?logo=nvidia" alt="GPU Support" />
+  
+  <!-- AI/ML Technologies -->
+  <img src="https://img.shields.io/badge/YOLO-Object%20Detection-orange?logo=opencv" alt="YOLO Detection" />
+  <img src="https://img.shields.io/badge/Siamese%20Network-PyTorch-9cf?logo=pytorch" alt="Siamese Network" />
+  <img src="https://img.shields.io/badge/Similarity-Cosine%20Score-green?logo=scikitlearn" alt="Cosine Similarity" />
+  <img src="https://img.shields.io/badge/Matching-Hungarian%20Algorithm-blue?logo=matrix" alt="Hungarian Matching" />
+  
+  <!-- Project Info -->
+  <img src="https://img.shields.io/badge/Status-Prototype-lightgrey?logo=github" alt="Project Status" />
+  <img src="https://img.shields.io/badge/License-MIT-green?logo=opensourceinitiative" alt="MIT License" />
+
+  <!-- Notebook or Live Demo -->
+  <a href="https://colab.research.google.com/your_notebook_link_here" target="_blank">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/>
+  </a>
+
+  <!-- GitHub Socials -->
+  <a href="https://github.com/sAI-2025/Cross-Camera-Player-Mapping/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/stars/sAI-2025/Cross-Camera-Player-Mapping?style=social" alt="GitHub Stars"/>
+  </a>
+  <a href="https://github.com/sAI-2025/Cross-Camera-Player-Mapping/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues/sAI-2025/Cross-Camera-Player-Mapping?style=social" alt="GitHub Issues"/>
+  </a>
 </p>
 
 ---
