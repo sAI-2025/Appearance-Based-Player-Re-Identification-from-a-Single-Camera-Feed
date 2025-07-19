@@ -85,6 +85,20 @@ pip install -r requirements.txt
 
 ---
 
+## 👩‍💻 Run the Notebook
+
+From the root directory:
+
+```bash
+cd code
+jupyter notebook titled.ipynb
+```
+
+Run all cells to process the video and generate annotated outputs.
+Final annotated video is exported to the `results/` folder.
+---
+
+
 ## 🧠 How It Works (Methodology)
 
 This system is designed to simulate real-time re-identification. It uses a multi-stage modular pipeline:
@@ -159,33 +173,8 @@ Annotated videos are saved in the `results/` directory:
 
 ---
 
-## 👩‍💻 Run the Notebook
 
-From the root directory:
 
-```bash
-cd code
-jupyter notebook titled.ipynb
-```
-
-Run all cells to process the video and generate annotated outputs.
-
----
-
-## Configuration
-
-### Environment Variables
-
-```bash
-# Required
-CUDA_VISIBLE_DEVICES=0  # Optional: GPU configuration
-
-# Optional
-VIDEO_BROADCAST_PATH=path/to/broadcast_video.mp4
-VIDEO_TACTICAM_PATH=path/to/tacticam_video.mp4
-```
-
----
 
 ## Contributing
 
